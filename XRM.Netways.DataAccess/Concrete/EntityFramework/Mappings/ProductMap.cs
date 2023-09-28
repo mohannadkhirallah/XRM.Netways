@@ -8,7 +8,7 @@ using XRM.Netways.Entities.Concrete;
 
 namespace XRM.Netways.DataAccess.Concrete.EntityFramework.Mappings
 {
-    internal class ProductMap:EntityTypeConfiguration<Product>
+    public class ProductMap:EntityTypeConfiguration<Product>
     {
         public ProductMap()
         {
