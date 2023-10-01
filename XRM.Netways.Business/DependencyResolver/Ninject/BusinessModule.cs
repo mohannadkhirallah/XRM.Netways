@@ -15,8 +15,8 @@ namespace XRM.Netways.Business.DependencyResolver.Ninject
     {
         public override void Load()
         {
-            Bind<IProductService>().To<ProductManager>();
-            Bind<IProductDal>().To<EfProductDal>();   // simply this is what ninject does => ProductManager x = new ProductManager();
+            Bind<IProductService>().To<ProductManager>(); // simply this is what ninject does => ProductManager x = new ProductManager();
+            Bind<IProductDal>().To<EfProductDal>();   
         }
     }
 }
