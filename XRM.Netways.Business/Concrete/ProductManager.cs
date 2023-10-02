@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using XRM.Core.Aspect.Postsharp.ValidationAspect;
 using XRM.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using XRM.Netways.Business.Abstract;
 using XRM.Netways.Business.ValidationRules.FluentValidation;
@@ -21,11 +22,12 @@ namespace XRM.Netways.Business.Concrete
             _productDal = productDal;
         }
 
+        [FluentValidationAspect(typeof(ProductValidator))]
         public void Add(Product product)
         { 
             
             // Business validation and Rules
-            ValidationTool.FluentValidate(new ProductValidator(), product);
+            //ValidationTool.FluentValidate(new ProductValidator(), product);
 
             _productDal.Add(product);
         }
