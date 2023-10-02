@@ -22,8 +22,9 @@ namespace XRM.Netways.Business.Concrete
         }
 
         public void Add(Product product)
-        { // Business validation and Rules
-
+        { 
+            
+            // Business validation and Rules
             ValidationTool.FluentValidate(new ProductValidator(), product);
 
             _productDal.Add(product);
