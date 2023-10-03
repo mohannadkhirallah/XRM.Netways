@@ -11,6 +11,7 @@ namespace XRM.Netways.Entities.Concrete
 {
     public class Product :IEntity
     {
+        
         public int ProdudctId { get; set; }
         public string ProductName { get; set; }
         public int CategoryId { get; set; }

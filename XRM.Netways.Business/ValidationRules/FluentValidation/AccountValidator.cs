@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XRM.Core.Entities
+namespace XRM.Netways.Business.ValidationRules.FluentValidation
 {
-    public interface IEntity
+    internal class AccountValidator
     {
-        
     }
 }

@@ -26,5 +26,6 @@ namespace XRM.Core.Aspect.Postsharp.ValidationAspect
                 ValidationTool.FluentValidate(validator, entity);
             }
         }
+       
     }
 }

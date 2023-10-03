@@ -27,8 +27,10 @@ namespace XRM.Netways.Business.Concrete
         { 
             
             // Business validation and Rules
-            //ValidationTool.FluentValidate(new ProductValidator(), product);
-
+           ValidationTool.FluentValidate(new ProductValidator(), product);
+            // tracing
+            // calculate time
+            // execption handler
             _productDal.Add(product);
         }
 
@@ -46,6 +48,12 @@ namespace XRM.Netways.Business.Concrete
         {
             return _productDal.GetList(p => p.CategoryId == Category);
         }
+
+        public List<Product> GetMostSellingProduct()
+        {
+            return _productDal.GetList(p => p.CategoryId == 12);
+        }
+
         public void Update(Product product)
         {
             _productDal.Update(product);
