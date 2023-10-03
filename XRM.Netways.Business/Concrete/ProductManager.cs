@@ -27,7 +27,7 @@ namespace XRM.Netways.Business.Concrete
         { 
             
             // Business validation and Rules
-           ValidationTool.FluentValidate(new ProductValidator(), product);
+           //ValidationTool.FluentValidate(new ProductValidator(), product);
             // tracing
             // calculate time
             // execption handler
